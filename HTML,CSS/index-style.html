@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body{
+            background-color: rgb(222, 172, 133);
+            color: rgb(83, 3, 3);
+        }
+
+        #btn-small{
+            background-color: rgb(16, 102, 73);
+            font-size:17px;
+            padding: 0px 15px;
+            margin-bottom: 8px;
+            color: aliceblue;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header>
+        <h1 style="background-color: #d7d8b6;" >Welcome to Bro code youtube channel</h1>
+    </header>
+
+    <!-- 1.  Create button -->
+
+    <a href="https://www.w3schools.com/" target="_blank">
+    <!-- <a href="./index.html" target="_blank"></a>     -->
+        <button style="background-color: antiquewhite;color: #bd1515;border-radius: 15px;font-size: 25px;">click me</button>
+    </a>
+    <br>
+    <button onclick="myfunction()" style="margin: 15px 0px;font-size: 25px;background-color:antiquewhite;color: #bd1515;border-radius: 15px;">change text</button>
+
+
+    <p id="Greeting" style="color: blue ;font-size: 19px;font-weight: 600;">Hello</p>
+
+
+
+
+    <!-- 2.  Create Form -->
+
+    <form action="index.php" method="post" enctype="multipart/form-data">
+
+        <label for="Firstname">User Firstname: </label>
+        <input type="text" id="Firstname" placeholder="Enter firstname"required minlength="6" maxlength="15"><br>
+
+        <label for="lastname">User Lastname: </label>
+        <input type="text" id="lastname" placeholder="Enter lastname" required><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" maxlength="8" required placeholder="Enter Password"><br>
+      
+        <label for="email">email ID:</label>
+        <input type="email" id="email" required><br>
+
+        <label for="phone">Phone no:</label>
+        <!-- <input type="number" id="phone"><br> -->
+        <input type="tel" id="phone" placeholder="### - ### - ####" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+        <label for="bdate">Birth date:</label>
+        <input type="date" id="bdate" required><br>
+
+        <label for="year">Year of paassed out :</label>
+        <input type="number" id="year" required min="2000" max="2025"><br>
+
+        <label for="Gender"></label>
+        <label for="male"> Male</label>
+        <input type="radio" id="male" name="Gender" value="Mr.">
+        <label for="female"> Female</label>
+        <input type="radio" id="female" name="Gender" value="Ms.">
+        <label for="Transegender"> Transegender</label>
+        <input type="radio" id="Transegender" name="Gender"value="Mr./Ms."><br>
+
+
+        <label for="pay">Payment method </label>
+
+        <select id="pay">
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="giftcard">Giftcard</option>
+        </select>
+        <br>
+        <label for="subscribe">Subscribe:</label>
+        <input type="checkbox" id="subscribe"> <br>
+
+        <label for="feed">Comments:</label>
+        <textarea  id="feed" rows="3" cols="30"></textarea><br>
+
+        <label for="File">Choose file</label>
+        <input type="file" id="File" accept="image/png"><br>
+
+
+        <br>
+        <input type="reset" id="btn-small"><br>
+        <input type="submit" id="btn-small" value="Register">
+
+
+    </form>
+
+    <!-- Inline,Internal,External - CSS-->
+    <p id="p1" class="odd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error excepturi ullam aliquid molestiae, asperiores voluptates tempora accusantium ducimus, illo non quia? Accusamus minima fugit quibusdam sunt accusantium natus soluta sint.</p>
+    <p id="p2" class="even">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum molestias sit quaerat officia quisquam tempora, pariatur voluptas laudantium exercitationem voluptatum veritatis expedita sed, eaque est voluptate eius vel, repellat esse!</p>
+    <p id="p3" class="odd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo temporibus iste possimus tenetur nesciunt accusamus, incidunt repellendus ullam doloremque unde quia provident ratione ex cupiditate suscipit harum. Ex, voluptatum deleniti.</p>
+    <p id="p4" class="even">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ea iste ipsam ducimus, nemo maxime ex et natus nesciunt veritatis recusandae libero quibusdam deserunt quas possimus magni beatae porro voluptate.</p>
+
+
+    <footer>
+        &copy; copyright reserved
+        <p>from bro code</p>
+    </footer>
+    
+
+
+
+
+    <script>
+        function myfunction(){
+            document.getElementById("Greeting").innerHTML="hello!  Baiya";
+        }
+
+    </script>
+
+</body>
+</html>

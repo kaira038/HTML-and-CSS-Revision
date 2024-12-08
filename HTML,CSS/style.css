@@ -1,0 +1,30 @@
+
+
+/* External CSS */
+
+h1{
+    color: rgb(78, 24, 4);
+}
+
+.odd{
+    background-color: black;
+    color: rgb(238, 120, 100);
+    padding: 15px;
+}
+.even{
+    background-color: aquamarine;
+    color: rgb(5, 5, 112);
+    padding: 15px;
+}
+
+footer{
+    background-color: #d7d8b6;
+}
+
+#p1,#p3{
+    border: 3px solid rgb(234, 84, 84);
+}
+
+#p4,#p2{
+    border: 3px solid rgb(43, 59, 146);
+}
