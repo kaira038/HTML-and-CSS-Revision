@@ -1,0 +1,504 @@
+/* h1{
+    font-family: Verdana, sans-serif;
+    font-size: 2em;
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+} */
+
+/* ***   2.  Goolgle fonts   *** */
+
+
+/* Google font API */
+
+/* h1{
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+}
+p{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+} */
+
+
+/* ***   3. locally installed on user computer /file cab be loaded remote server  *** */
+
+@font-face{
+    src: url(./fonts/Nunito-Italic-VariableFont_wght.ttf);
+    font-family: "Nunito";
+}
+
+h1{
+    font-family: "Nunito", sans-serif;
+    font-weight: 800; 
+}
+
+@font-face{
+    src: url(./fonts/RobotoCondensed-Italic-VariableFont_wght.ttf);
+    font-family: "Roboto Condensed";
+}
+
+p{
+    font-family: "Roboto Conensed", sans-serif;
+    font-weight: 600;
+}
+
+/* 2. Border - styling */
+
+#border-styling{
+    background-color: rgb(193, 254, 254);
+    padding: 0px 5px;
+
+    border-radius: 11px;
+    border-style: solid; 
+    border-width: 4px;
+    border-color: rgb(18, 122, 233);
+}
+
+#border-styling+p{
+    padding: 4px;
+    border: 3px double rgb(24, 226, 24);  /* short hand property*/
+}
+
+#para{
+    border-bottom: 2px dotted rgb(223, 135, 35);
+    border-left: 2px dashed rgb(231, 45, 231);
+    border-top: 2px dotted rgb(15, 100, 161);
+    border-right: 2px dashed greenyellow;
+    border-radius: 15px;
+    padding: 8px;
+    
+}
+
+/* 3. text and box shadow */
+h2{
+    color: rgb(7, 2, 12);
+    text-shadow: 5px 5px 5px rgb(107, 215, 237),-2px -4px 5px rgb(212, 29, 36) ;
+    font-size: 55px;
+}
+
+#box1{
+    width: 150px;
+    height: 150px;
+    
+    background-color: rgba(0, 0, 0, 0.088);
+    box-shadow: 4px 4px 6px rgb(63, 61, 61);
+}
+
+/*  padding and Margin */
+
+#box1{
+    margin: auto;
+    margin-bottom: 20px;
+    
+}
+h2{
+    margin-left: 150px;
+    background-color: bisque;
+    padding: 0px 80px;
+}
+
+/* Float */
+
+#img1{
+    float: left;
+}
+#img2{
+    float: right;
+}
+#div-float{
+    border: 1px solid black;
+    padding: 5px;
+    display: flow-root;
+}
+
+/* overflow */
+
+#demo-overflow{
+    border: 4px solid rgb(170, 36, 36);
+    margin-top: 5px;
+    padding: 5px;
+    height: 75px;            /*  overflow*/
+    /* overflow: visible;    no change*/
+    /* overflow: hidden;     exceeded content get hide,however still do copy/paste like action */
+    /* overflow: clip;       
+    overflow-clip-margin: 7px;    set how much can display over hidden   */
+    /* overflow: scroll;     can set scroll bar*/
+    overflow: auto; /* does not applay scroll until is needed */
+
+}
+
+/* Display property */
+
+
+#sample-block{
+    background-color: rgb(234, 125, 125);
+    width: 100px;
+    height: 100px;
+    display: inline-block;  /*support width and height while in inline */
+    visibility: hidden; /* element is hidden but space allocated */
+}
+span{
+    background-color: rgb(156, 241, 241);
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+/* position */
+
+#box2{
+    width: 150px;
+    height: 150px;
+    background-color: bisque;
+    position: relative;
+    left:250px ;
+    top: -85px;
+}
+#box3{
+    background-color: beige;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+#box4{
+    background-color: aquamarine;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 200px;
+}
+#child-abs{
+    background-color: rgb(6, 123, 71);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+#box5{
+    background-color: cornflowerblue;
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    position: sticky;
+    top: 250px;
+}
+
+/* backgroud image */
+
+#img{
+    position: relative;
+    height: 250px;
+    width: 850px;
+    border: 1px solid black;
+    margin: auto;
+    
+}
+#mg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(./Image/flowers.avif) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    z-index:-1 ;
+   
+}
+#img img{
+    border: 2px solid rgb(13, 167, 69);
+    position: absolute;
+    top: 50%;
+    left: 340px;
+}
+
+hr{
+    border: 2px solid black;
+}
+
+/* Combinators */
+
+.container{  
+   border: 2px solid blue;
+}
+.container p{    /* Descendent */
+    color: red;
+}
+.container>p{    /* Child */
+    background-color: aqua;
+}
+.container~p{    /* General sibling*/
+    background-color: rgb(207, 155, 255);
+}
+.container+p{    /*Adjacent sibling*/
+    border: 3px solid rgb(67, 7, 97);
+}
+
+
+/* pseudo classes  */
+
+#pseudo-sample{
+    text-decoration: underline;
+    font-size:large;
+    font-weight: bold;
+}
+
+#pseudo-sample:link{
+    color: rgb(85, 118, 253);
+}
+#pseudo-sample:hover{
+    color: rgb(160, 73, 241);
+    font-size: larger;
+}
+#pseudo-sample:active{
+    color: blue;
+    font-size: larger;
+}
+#pseudo-sample:visited{
+    color: gray;
+}
+ul>li{
+    font-weight: 600;
+}
+ul>li:hover{
+    background-color: black;
+    color: white;
+    width: 140px;
+}
+ul>li:not(:hover){
+    background-color: gray;
+    width: 140px;
+}
+
+ul>li:nth-child(odd){
+    background-color: rgb(211, 208, 208);
+}
+ul>li:nth-child(odd):hover{
+    background-color: black;
+    color: white;
+}
+ul>li:nth-child(3n):hover{
+    color: red;
+}
+
+/* psuedo-element */
+#hello{
+    font-style: italic;
+}
+#hello::first-letter{
+    font-size: larger;
+    color: red;
+    
+}
+#hello+p::first-line{
+    color: rgb(68, 71, 233);
+}
+#hello+p::selection{
+    color: yellowgreen;
+    background-color: black;
+}
+/* #fruit li::before{
+    content: "✔️";
+} */
+
+#fruit li::marker{
+    content: "→";
+    color: red;
+    font-size: 20px;
+    
+}
+#apple::after{
+    content: "🍏";
+}
+#grape::after{
+    content: "🍇";
+}
+#banana::after{
+    content: "🍌";
+}
+
+
+/* pagination */
+
+#pg{
+    text-align: center;
+}
+#pg a{
+    text-decoration: none;
+    padding: 10px 17px;
+    background-color: rgb(134, 238, 134);
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+#pg a.active{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#pg a:hover:not(.active){
+    background-color: greenyellow;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Dropdown */
+
+.dropdown button{
+    background-color: black;
+    padding: 8px 25px;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+}
+
+.dropdown a{
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding: 10px 15px;
+}
+
+.dropdown .content{
+    background-color: hsla(0, 47%, 97%, 0.942);
+    min-width: 150px;
+    position: absolute;
+    box-shadow: 3px 3px 6px black;
+    display: none;
+}
+.dropdown a:hover{
+    background-color: hsl(45, 2%, 63%);
+    font-weight: bolder;
+}
+
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+   background-color:rgba(0, 0, 0, 0.51);
+   color: black;
+   font-weight: bolder;
+}
+
+/* Navigation bar */
+
+.navbar ul{
+   list-style-type: none;
+   padding: 0px;
+   margin: 0px;
+}
+.navbar>ul>li>a{
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    color:black;
+    font-weight: bolder;    
+}
+.navbar>ul>li>a:hover{
+    background-color: black;
+    color: white;
+}
+.navbar li{
+    float: left;
+}
+.navbar{
+    margin-bottom: 100px;
+}
+
+/* Flex Box */
+.container-element{
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:center ;
+    flex-wrap: wrap;
+    column-gap: 2em;
+    row-gap: 2em;
+    
+}
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 8em;
+    text-align: center;
+    border-radius: 15px;
+}
+#box-1{
+    background-color: red;
+    align-self: baseline;
+}
+#box-2{
+    background-color: yellow;
+}
+#box-3{
+    background-color: green;
+    align-self: flex-end;
+}
+#box-4{
+    background-color: blue;
+}
+#box-5{
+    background-color: purple;
+}
+#box-6{
+    background-color: aquamarine;
+}
+#box-7{
+    background-color: rgb(118, 231, 42);
+}
+
+/* Transformation */
+
+.container-box{
+    background-color: rgb(238, 190, 233);
+    padding: 100px  0px;
+    color: white;
+    font-weight: bolder;
+    text-indent: 15px;
+}
+
+.container-box >div{
+    background-color: purple;
+    width: 250px;
+    height: 100px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+#translate:hover{
+    transform: translate(40px,20px);
+    transition: 1.5s;
+    transition-timing-function: ease-out;
+}
+
+#rotate:hover{
+    transform: rotate(360deg);
+    transition: 1.5s;
+    transition-timing-function: ease-in;
+}
+
+#scale:hover{
+    transform: scale(0.5,0.5);
+    transition: 1.0s;
+    transition-timing-function: linear;
+}
+
+#skew:hover{
+    transform: skewy(20deg);
+    transition: 1.0s;
+    transition-timing-function: linear;
+}
